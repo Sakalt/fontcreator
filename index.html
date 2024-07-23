@@ -7,35 +7,22 @@
     <style>
         canvas { border: 1px solid black; }
         .toolbar { margin-bottom: 10px; }
-        .radical-form { margin-top: 20px; }
+        .editor { margin-top: 20px; }
     </style>
 </head>
 <body>
     <h1>Font Creator</h1>
     <div class="toolbar">
         <button id="addSlot">Add Slot</button>
-        <button id="copy">Copy</button>
-        <button id="cut">Cut</button>
-        <button id="undo">Undo</button>
-        <button id="redo">Redo</button>
-        <button id="save">Save</button>
-        <button id="load">Load</button>
-        <button id="export">Export</button>
-        <button id="import">Import</button>
-        <button id="flip">Flip</button>
-        <button id="saveFont">Save Font</button>
-        <input type="file" id="fileInput" style="display:none">
+        <button id="saveGlyph">Save Glyph</button>
+        <button id="editGlyph">Edit Glyph</button>
         <input type="text" id="charInput" placeholder="Enter character">
     </div>
-    <canvas id="canvas" width="800" height="600"></canvas>
-    <div class="radical-form">
-        <h2>Define Radical</h2>
-        <input type="text" id="radicalName" placeholder="Radical name">
-        <textarea id="radicalElements" placeholder="Define elements and positions"></textarea>
-        <button id="addRadical">Add Radical</button>
-        <button id="loadRadicals">Load Radicals</button>
+    <canvas id="mainCanvas" width="800" height="600"></canvas>
+    <div class="editor">
+        <h2>Edit Glyph</h2>
+        <canvas id="editorCanvas" width="800" height="600" style="display:none;"></canvas>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fonteditor/0.0.3/fonteditor.js"></script>
     <script src="fontCreator.js"></script>
 </body>
 </html>
