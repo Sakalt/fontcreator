@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Font Creator</title>
+    <title>Font Editor</title>
     <style>
         canvas { border: 1px solid black; }
         .toolbar { margin-bottom: 10px; }
         .editor { margin-top: 20px; }
+        .slot-container { margin-top: 20px; }
     </style>
 </head>
 <body>
-    <h1>Font Creator</h1>
+    <h1>Font Editor</h1>
     <div class="toolbar">
         <button id="addSlot">Add Slot</button>
         <button id="saveGlyph">Save Glyph</button>
         <button id="editGlyph">Edit Glyph</button>
+        <button id="copyGlyph">Copy</button>
+        <button id="cutGlyph">Cut</button>
+        <button id="pasteGlyph">Paste</button>
+        <button id="undo">Undo</button>
+        <button id="redo">Redo</button>
         <input type="text" id="charInput" placeholder="Enter character">
+        <input type="file" id="radicalsInput" accept=".json" />
+        <button id="loadRadicals">Load Radicals</button>
     </div>
     <canvas id="mainCanvas" width="800" height="600"></canvas>
     <div class="editor">
         <h2>Edit Glyph</h2>
         <canvas id="editorCanvas" width="800" height="600" style="display:none;"></canvas>
     </div>
-    <script src="fontCreator.js"></script>
+    <div class="slot-container">
+        <h2>Radicals</h2>
+        <div id="radicalsList"></div>
+    </div>
+    <script src="fontEditor.js"></script>
 </body>
 </html>
